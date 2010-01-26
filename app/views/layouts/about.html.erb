@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta name="author" content="andrisetiawan" />
+<meta name="copyright" content="2009 by andrisetiawan" />
+<meta name="description" content="description" />
+<meta name="keywords" content="keywords" />
+<meta name="robots" content="all" />
+<title>About Web Extractor</title>
+  <%= stylesheet_link_tag 'reset','text','style' %>
+</head>
+<body>
+<div class="container">
+	<div id="header">	
+	</div>
+	<div id="head-navigation">
+		<ul>
+			<li id="nav-extractor"><%= link_to 'home','home' %></li>
+			<li id="nav-statistic"><%= link_to 'statistic','statistic' %></li>
+			<li id="nav-about-current"><%= link_to 'about','about' %></li>
+		</ul>		
+	</div>
+	<div id="bodier">
+		<div id="content-1"class="grey">
+			<span style="color: green"><%= flash[:notice] %></span>
+			<%= yield  %>
+		</div>
+	</div>
+	<div id="footer">
+		<p><br />Copyright 2009 &copy; <a href="http://andrisetiawan.info/" title="andrisetiawan.info">andrisetiawan</a></p>
+	</div>
+</div>
+
+</body>
+</html>
