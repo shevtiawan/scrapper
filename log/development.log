@@ -1,0 +1,109 @@
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (11.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE TABLE "rules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "item_rule" varchar(255), "product_name_rule" varchar(255), "price_rule" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100126150843')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("rules")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+Migrating to CreateStatistics (20100126151509)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+Migrating to CreateStatistics (20100126151509)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.4ms)[0m   [0mCREATE TABLE "statistics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rule_id" integer, "time_added" time, "keyword" varchar(255), "download_time" float, "extract_time" float, "memory_consumption" float, "file_size_before_extraction" float, "file_size_after_extraction" float, "number_of_product_should_be_extracted" integer, "number_of_product_extracted" integer, "number_of_true_product_extracted" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (23.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100126151509')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("rules")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("statistics")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+Migrating to CreateStatistics (20100126151509)
+Migrating to CreateProducts (20100126151839)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (4.9ms)[0m   [0mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "statistic_id" integer, "name" varchar(255), "price" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (19.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100126151839')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (19.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("rules")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("statistics")[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-26 22:24:47) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 31ms (View: 16, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-01-26 22:24:50) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 53ms (View: 14, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-26 22:25:14) [GET]
+  [4;35;1mProduct Load (2.4ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 39ms (View: 14, DB: 2) | 200 OK [http://localhost/products]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-26 22:35:29) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 47ms (View: 37, DB: 0) | 200 OK [http://localhost/home]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-26 22:36:45) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/]

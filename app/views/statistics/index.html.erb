@@ -1,0 +1,40 @@
+<h1>Listing statistics</h1>
+
+<table>
+  <tr>
+    <th>Rule</th>
+    <th>Time added</th>
+    <th>Keyword</th>
+    <th>Download time</th>
+    <th>Extract time</th>
+    <th>Memory consumption</th>
+    <th>File size before extraction</th>
+    <th>File size after extraction</th>
+    <th>Number of product should be extracted</th>
+    <th>Number of product extracted</th>
+    <th>Number of true product extracted</th>
+  </tr>
+
+<% for statistic in @statistics %>
+  <tr>
+    <td><%=h statistic.rule_id %></td>
+    <td><%=h statistic.time_added %></td>
+    <td><%=h statistic.keyword %></td>
+    <td><%=h statistic.download_time %></td>
+    <td><%=h statistic.extract_time %></td>
+    <td><%=h statistic.memory_consumption %></td>
+    <td><%=h statistic.file_size_before_extraction %></td>
+    <td><%=h statistic.file_size_after_extraction %></td>
+    <td><%=h statistic.number_of_product_should_be_extracted %></td>
+    <td><%=h statistic.number_of_product_extracted %></td>
+    <td><%=h statistic.number_of_true_product_extracted %></td>
+    <td><%= link_to 'Show', statistic %></td>
+    <td><%= link_to 'Edit', edit_statistic_path(statistic) %></td>
+    <td><%= link_to 'Destroy', statistic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New statistic', new_statistic_path %>

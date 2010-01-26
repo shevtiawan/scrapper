@@ -1,0 +1,58 @@
+<p>
+  <b>Rule:</b>
+  <%=h @statistic.rule_id %>
+</p>
+
+<p>
+  <b>Time added:</b>
+  <%=h @statistic.time_added %>
+</p>
+
+<p>
+  <b>Keyword:</b>
+  <%=h @statistic.keyword %>
+</p>
+
+<p>
+  <b>Download time:</b>
+  <%=h @statistic.download_time %>
+</p>
+
+<p>
+  <b>Extract time:</b>
+  <%=h @statistic.extract_time %>
+</p>
+
+<p>
+  <b>Memory consumption:</b>
+  <%=h @statistic.memory_consumption %>
+</p>
+
+<p>
+  <b>File size before extraction:</b>
+  <%=h @statistic.file_size_before_extraction %>
+</p>
+
+<p>
+  <b>File size after extraction:</b>
+  <%=h @statistic.file_size_after_extraction %>
+</p>
+
+<p>
+  <b>Number of product should be extracted:</b>
+  <%=h @statistic.number_of_product_should_be_extracted %>
+</p>
+
+<p>
+  <b>Number of product extracted:</b>
+  <%=h @statistic.number_of_product_extracted %>
+</p>
+
+<p>
+  <b>Number of true product extracted:</b>
+  <%=h @statistic.number_of_true_product_extracted %>
+</p>
+
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

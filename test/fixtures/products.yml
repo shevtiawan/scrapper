@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  statistic_id: 1
+  name: MyString
+  price: 1.5
+
+two:
+  statistic_id: 1
+  name: MyString
+  price: 1.5

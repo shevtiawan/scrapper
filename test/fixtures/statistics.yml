@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rule_id: 1
+  time_added: 2010-01-26 22:15:09
+  keyword: MyString
+  download_time: 
+  extract_time: 
+  memory_consumption: 
+  file_size_before_extraction: 
+  file_size_after_extraction: 
+  number_of_product_should_be_extracted: 1
+  number_of_product_extracted: 1
+  number_of_true_product_extracted: 1
+
+two:
+  rule_id: 1
+  time_added: 2010-01-26 22:15:09
+  keyword: MyString
+  download_time: 
+  extract_time: 
+  memory_consumption: 
+  file_size_before_extraction: 
+  file_size_after_extraction: 
+  number_of_product_should_be_extracted: 1
+  number_of_product_extracted: 1
+  number_of_true_product_extracted: 1

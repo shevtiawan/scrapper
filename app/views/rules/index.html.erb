@@ -1,0 +1,28 @@
+<h1>Listing rules</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Item rule</th>
+    <th>Product name rule</th>
+    <th>Price rule</th>
+  </tr>
+
+<% for rule in @rules %>
+  <tr>
+    <td><%=h rule.name %></td>
+    <td><%=h rule.url %></td>
+    <td><%=h rule.item_rule %></td>
+    <td><%=h rule.product_name_rule %></td>
+    <td><%=h rule.price_rule %></td>
+    <td><%= link_to 'Show', rule %></td>
+    <td><%= link_to 'Edit', edit_rule_path(rule) %></td>
+    <td><%= link_to 'Destroy', rule, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rule', new_rule_path %>

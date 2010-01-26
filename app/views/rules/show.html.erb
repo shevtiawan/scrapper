@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @rule.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @rule.url %>
+</p>
+
+<p>
+  <b>Item rule:</b>
+  <%=h @rule.item_rule %>
+</p>
+
+<p>
+  <b>Product name rule:</b>
+  <%=h @rule.product_name_rule %>
+</p>
+
+<p>
+  <b>Price rule:</b>
+  <%=h @rule.price_rule %>
+</p>
+
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>
