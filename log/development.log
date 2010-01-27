@@ -147,3 +147,95 @@ ActionController::RoutingError (No route matches "/statistic" with {:method=>:ge
     script/server:3
 
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-26 23:27:34) [GET]
+  [4;36;1mRule Load (2.1ms)[0m   [0;1mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 103ms (View: 42, DB: 2) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#new (for 127.0.0.1 at 2010-01-26 23:27:37) [GET]
+Rendering template within layouts/rules
+Rendering rules/new
+Completed in 166ms (View: 85, DB: 0) | 200 OK [http://localhost/rules/new]
+
+
+Processing RulesController#create (for 127.0.0.1 at 2010-01-26 23:30:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "rule"=>{"name"=>"walmart", "product_name_rule"=>".prodLink", "url"=>"http://www.walmart.com/search/search-ng.do?search_constraint=0&ic=48_0&search_query=\#{@search_term}&Find.x=0&Find.y=0&Find=Find", "price_rule"=>".PriceXLBold", "item_rule"=>".item"}}
+  [4;35;1mRule Create (5.7ms)[0m   [0mINSERT INTO "rules" ("name", "created_at", "updated_at", "url", "product_name_rule", "price_rule", "item_rule") VALUES('walmart', '2010-01-26 16:30:46', '2010-01-26 16:30:46', 'http://www.walmart.com/search/search-ng.do?search_constraint=0&ic=48_0&search_query=#{@search_term}&Find.x=0&Find.y=0&Find=Find', '.prodLink', '.PriceXLBold', '.item')[0m
+Redirected to #<Rule:0xb70108d0>
+Completed in 124ms (DB: 6) | 302 Found [http://localhost/rules]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-26 23:30:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRule Load (1.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 1) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 102ms (View: 49, DB: 2) | 200 OK [http://localhost/rules/1]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-26 23:30:55) [GET]
+  [4;35;1mRule Load (18.6ms)[0m   [0mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 96ms (View: 50, DB: 19) | 200 OK [http://localhost/rules]
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;35;1mRule Load (2.3ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.8ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;35;1mRule Load (2.3ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (1.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+
+
+Processing RulesController#edit (for 127.0.0.1 at 2010-01-27 00:32:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 1) [0m
+Rendering template within layouts/rules
+Rendering rules/edit
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/rules/1/edit]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 00:32:19) [GET]
+  [4;35;1mRule Load (1.1ms)[0m   [0mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 31ms (View: 18, DB: 1) | 200 OK [http://localhost/rules]
+  [4;36;1mRule Load (0.8ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+
+
+Processing RulesController#edit (for 127.0.0.1 at 2010-01-27 00:42:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 1) [0m
+Rendering template within layouts/rules
+Rendering rules/edit
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/rules/1/edit]
+
+
+Processing RulesController#update (for 127.0.0.1 at 2010-01-27 00:42:55) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "id"=>"1", "rule"=>{"name"=>"walmart", "product_name_rule"=>".prodLink", "url"=>"http://www.walmart.com/search/search-ng.do?search_constraint=0&ic=48_0&search_query=ini_kata_yang_diganti&Find.x=0&Find.y=0&Find=Find", "price_rule"=>".PriceXLBold", "item_rule"=>".item"}}
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."id" = 1) [0m
+  [4;36;1mRule Update (1.8ms)[0m   [0;1mUPDATE "rules" SET "updated_at" = '2010-01-26 17:42:55', "url" = 'http://www.walmart.com/search/search-ng.do?search_constraint=0&ic=48_0&search_query=ini_kata_yang_diganti&Find.x=0&Find.y=0&Find=Find' WHERE "id" = 1[0m
+Redirected to #<Rule:0xb6fcf934>
+Completed in 28ms (DB: 2) | 302 Found [http://localhost/rules/1]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-27 00:42:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."id" = 1) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/rules/1]
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;35;1mRule Load (2.3ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (2.4ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
