@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta name="author" content="andrisetiawan" />
+<meta name="copyright" content="2009 by andrisetiawan" />
+<meta name="description" content="description" />
+<meta name="keywords" content="keywords" />
+<meta name="robots" content="all" />
+<title>Products: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'reset','text','style' %>
+</head>
+<body>
+<div class="container">
+	<div id="header">	
+	</div>
+	<div id="head-navigation">
+		<ul>
+			<li id="nav-extractor"><a href="#">Extractor</a></li>
+			<li id="nav-statistic"><%= link_to 'statistic','statistic' %></li>
+			<li id="nav-about"><%= link_to 'about','about' %></li>
+			<li id="nav-product-current"><%= link_to 'products','products' %></li>
+		</ul>		
+	</div>
+	<div id="bodier">
+		<%= yield  %>
+	</div>
+	<div id="footer">
+		<p><br />Copyright 2009 &copy; <a href="http://andrisetiawan.info/" title="andrisetiawan.info">andrisetiawan</a></p>
+	</div>
+</div>
+
+</body>
+</html>

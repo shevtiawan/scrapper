@@ -1,0 +1,5 @@
+<ol>
+<% @results.each do |item| %>
+	<li><%= item.product_name %> - <strong><%= item.product_price %></strong></li>
+<% end %>
+</ol>

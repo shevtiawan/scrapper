@@ -9,12 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100126151839) do
+ActiveRecord::Schema.define(:version => 20100128085246) do
 
   create_table "products", :force => true do |t|
     t.integer  "statistic_id"
     t.string   "name"
-    t.float    "price"
+    t.string   "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20100126151839) do
 
   create_table "statistics", :force => true do |t|
     t.integer  "rule_id"
-    t.time     "time_added"
     t.string   "keyword"
     t.float    "download_time"
     t.float    "extract_time"

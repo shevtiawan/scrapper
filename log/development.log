@@ -239,3 +239,1127 @@ Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/rules/1]
   [4;35;1mRule Load (2.3ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
   [4;36;1mRule Load (2.4ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
   [4;36;1mRule Load (0.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 13:57:29) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 26ms (View: 23, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 13:57:37) [POST]
+  Parameters: {"shop"=>"walmart", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;36;1mRule Load (0.8ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'walmart') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 10748ms (View: 117, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 13:59:04) [POST]
+  Parameters: {"shop"=>"tokopedia", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;35;1mRule Load (0.4ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokopedia') LIMIT 1[0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.url):
+    /app/models/extractor.rb:15:in `extract_product_from_online_web'
+    /app/controllers/home_controller.rb:13:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (124.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.7ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AboutController#index (for 127.0.0.1 at 2010-01-27 14:04:08) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 30ms (View: 17, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 14:10:22) [GET]
+  [4;36;1mRule Load (1.1ms)[0m   [0;1mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 41ms (View: 19, DB: 1) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#new (for 127.0.0.1 at 2010-01-27 14:10:25) [GET]
+Rendering template within layouts/rules
+Rendering rules/new
+Completed in 49ms (View: 26, DB: 0) | 200 OK [http://localhost/rules/new]
+
+
+Processing RulesController#create (for 127.0.0.1 at 2010-01-27 14:12:27) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "rule"=>{"name"=>"krazymarket", "product_name_rule"=>"a strong", "url"=>"http://www.krazymarket.com/search/ini_kata_yang_diganti/0010-0-40-1.html", "price_rule"=>":nth-child(5) strong", "item_rule"=>".product_item"}}
+  [4;35;1mRule Create (4.0ms)[0m   [0mINSERT INTO "rules" ("name", "created_at", "updated_at", "url", "product_name_rule", "price_rule", "item_rule") VALUES('krazymarket', '2010-01-27 07:12:27', '2010-01-27 07:12:27', 'http://www.krazymarket.com/search/ini_kata_yang_diganti/0010-0-40-1.html', 'a strong', ':nth-child(5) strong', '.product_item')[0m
+Redirected to #<Rule:0xb729892c>
+Completed in 31ms (DB: 4) | 302 Found [http://localhost/rules]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-27 14:12:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 2) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 65ms (View: 19, DB: 1) | 200 OK [http://localhost/rules/2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:12:32) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:13:47) [POST]
+  Parameters: {"shop"=>"krazymarket", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 23404ms (View: 11, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#rules (for 127.0.0.1 at 2010-01-27 14:15:28) [GET]
+
+
+ActionController::UnknownAction (No action responded to rules. Actions: extract and index):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 14:15:34) [GET]
+  [4;36;1mRule Load (1.4ms)[0m   [0;1mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 41ms (View: 24, DB: 1) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#edit (for 127.0.0.1 at 2010-01-27 14:15:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mRule Load (13.3ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."id" = 2) [0m
+Rendering template within layouts/rules
+Rendering rules/edit
+Completed in 52ms (View: 21, DB: 13) | 200 OK [http://localhost/rules/2/edit]
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:24:30) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:24:42) [POST]
+  Parameters: {"shop"=>"krazymarket", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;36;1mRule Load (7.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 35057ms (View: 23, DB: 7) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:25:45) [POST]
+  Parameters: {"shop"=>"krazymarket", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"blackberry"}
+  [4;35;1mRule Load (0.7ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 40885ms (View: 35, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:27:34) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 39ms (View: 30, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 14:28:13) [GET]
+  [4;36;1mRule Load (1.4ms)[0m   [0;1mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 81ms (View: 31, DB: 1) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#new (for 127.0.0.1 at 2010-01-27 14:28:15) [GET]
+Rendering template within layouts/rules
+Rendering rules/new
+Completed in 42ms (View: 19, DB: 0) | 200 OK [http://localhost/rules/new]
+
+
+Processing RulesController#create (for 127.0.0.1 at 2010-01-27 14:30:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "rule"=>{"name"=>"tokopedia", "product_name_rule"=>"h4 a", "url"=>"http://www.tokopedia.com/directory_product.pl?cid=&ccid=&search_type=directory_product.pl&search_child_category=&search_shop_category=1&search_people_category=1&search_keyword=ini_kata_yang_diganti&x=0&y=0", "price_rule"=>".price", "item_rule"=>".list-view li"}}
+  [4;35;1mRule Create (14.5ms)[0m   [0mINSERT INTO "rules" ("name", "created_at", "updated_at", "url", "product_name_rule", "price_rule", "item_rule") VALUES('tokopedia', '2010-01-27 07:30:29', '2010-01-27 07:30:29', 'http://www.tokopedia.com/directory_product.pl?cid=&ccid=&search_type=directory_product.pl&search_child_category=&search_shop_category=1&search_people_category=1&search_keyword=ini_kata_yang_diganti&x=0&y=0', 'h4 a', '.price', '.list-view li')[0m
+Redirected to #<Rule:0xb6f96d00>
+Completed in 54ms (DB: 15) | 302 Found [http://localhost/rules]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-27 14:30:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 3) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 40ms (View: 19, DB: 1) | 200 OK [http://localhost/rules/3]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:30:34) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 26ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:32:38) [POST]
+  Parameters: {"shop"=>"tokopedia", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;35;1mRule Load (0.8ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokopedia') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 21484ms (View: 21, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 14:38:54) [GET]
+  [4;36;1mRule Load (1.6ms)[0m   [0;1mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 82ms (View: 36, DB: 2) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#new (for 127.0.0.1 at 2010-01-27 14:38:56) [GET]
+Rendering template within layouts/rules
+Rendering rules/new
+Completed in 34ms (View: 13, DB: 0) | 200 OK [http://localhost/rules/new]
+
+
+Processing RulesController#create (for 127.0.0.1 at 2010-01-27 14:40:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "rule"=>{"name"=>"tokobagus", "product_name_rule"=>".listing_txt a", "url"=>"http://www.tokobagus.com/halaman/mencari/ini_kata_yang_diganti/search.asp", "price_rule"=>".listing_txt:nth-child(3)", "item_rule"=>".listing_txt"}}
+  [4;35;1mRule Create (2.4ms)[0m   [0mINSERT INTO "rules" ("name", "created_at", "updated_at", "url", "product_name_rule", "price_rule", "item_rule") VALUES('tokobagus', '2010-01-27 07:40:57', '2010-01-27 07:40:57', 'http://www.tokobagus.com/halaman/mencari/ini_kata_yang_diganti/search.asp', '.listing_txt a', '.listing_txt:nth-child(3)', '.listing_txt')[0m
+Redirected to #<Rule:0xb704646c>
+Completed in 43ms (DB: 2) | 302 Found [http://localhost/rules]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-27 14:40:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mRule Load (0.5ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 4) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 38ms (View: 19, DB: 1) | 200 OK [http://localhost/rules/4]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:41:08) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 44ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:41:53) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia 5800"}
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 1213ms (View: 42, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:42:36) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;36;1mRule Load (4.4ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 1158ms (View: 46, DB: 4) | 200 OK [http://localhost/home/extract]
+
+
+Processing RulesController#index (for 127.0.0.1 at 2010-01-27 14:44:07) [GET]
+  [4;35;1mRule Load (1.5ms)[0m   [0mSELECT * FROM "rules" [0m
+Rendering template within layouts/rules
+Rendering rules/index
+Completed in 174ms (View: 143, DB: 1) | 200 OK [http://localhost/rules]
+
+
+Processing RulesController#edit (for 127.0.0.1 at 2010-01-27 14:44:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mRule Load (0.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."id" = 4) [0m
+Rendering template within layouts/rules
+Rendering rules/edit
+Completed in 60ms (View: 29, DB: 1) | 200 OK [http://localhost/rules/4/edit]
+
+
+Processing RulesController#update (for 127.0.0.1 at 2010-01-27 14:44:18) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "id"=>"4", "rule"=>{"name"=>"tokobagus", "product_name_rule"=>".listing_txt a", "url"=>"http://www.tokobagus.com/halaman/mencari/ini_kata_yang_diganti/search.asp", "price_rule"=>".listing_txt:nth-child(3)", "item_rule"=>"tr"}}
+  [4;35;1mRule Load (10.8ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."id" = 4) [0m
+  [4;36;1mRule Update (1.4ms)[0m   [0;1mUPDATE "rules" SET "updated_at" = '2010-01-27 07:44:18', "item_rule" = 'tr' WHERE "id" = 4[0m
+Redirected to #<Rule:0xb7169678>
+Completed in 42ms (DB: 12) | 302 Found [http://localhost/rules/4]
+
+
+Processing RulesController#show (for 127.0.0.1 at 2010-01-27 14:44:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mRule Load (0.5ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."id" = 4) [0m
+Rendering template within layouts/rules
+Rendering rules/show
+Completed in 43ms (View: 17, DB: 1) | 200 OK [http://localhost/rules/4]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 14:44:26) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 29ms (View: 22, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 14:44:38) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;36;1mRule Load (1.0ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 5928ms (View: 44, DB: 1) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 15:25:09) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 36ms (View: 34, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 15:25:20) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;35;1mRule Load (0.8ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+
+
+NoMethodError (undefined method `stringify_keys!' for #<ExtractedItem:0xb72a15b8 @product_price=nil, @product_name=nil>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2578:in `attributes='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2283:in `initialize'
+    /app/controllers/home_controller.rb:16:in `new'
+    /app/controllers/home_controller.rb:16:in `extract'
+    /app/controllers/home_controller.rb:15:in `each'
+    /app/controllers/home_controller.rb:15:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (93.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 15:53:20) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 15:53:24) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;35;1mRule Load (0.7ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mStatistic Create (1.9ms)[0m   [0;1mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "time_added", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(NULL, '2010-01-27 08:53:25', NULL, '2010-01-27 08:53:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+
+NoMethodError (undefined method `stringify_keys!' for #<ExtractedItem:0xb727f738 @product_price=nil, @product_name=nil>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2578:in `attributes='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2283:in `initialize'
+    /app/controllers/home_controller.rb:22:in `new'
+    /app/controllers/home_controller.rb:22:in `extract'
+    /app/controllers/home_controller.rb:21:in `each'
+    /app/controllers/home_controller.rb:21:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (76.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 15:54:35) [POST]
+  Parameters: {"shop"=>"krazymarket", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;35;1mRule Load (0.5ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" IS NULL) LIMIT 1[0m
+  [4;35;1mStatistic Create (10.5ms)[0m   [0mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "time_added", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(NULL, '2010-01-27 08:54:43', NULL, '2010-01-27 08:54:43', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+
+
+NoMethodError (undefined method `stringify_keys!' for #<ExtractedItem:0xb724f704>):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2578:in `attributes='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:2283:in `initialize'
+    /app/controllers/home_controller.rb:22:in `new'
+    /app/controllers/home_controller.rb:22:in `extract'
+    /app/controllers/home_controller.rb:21:in `each'
+    /app/controllers/home_controller.rb:21:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (87.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (11.3ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 15:57:44) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 15:57:45) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 35ms (View: 33, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-27 15:57:47) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 31ms (View: 18, DB: 0) | 200 OK [http://localhost/home/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-27 15:57:50) [POST]
+  Parameters: {"shop"=>"krazymarket", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"iphone"}
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'krazymarket') LIMIT 1[0m
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mStatistic Create (3.3ms)[0m   [0;1mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "time_added", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(NULL, '2010-01-27 08:57:54', NULL, '2010-01-27 08:57:54', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (1.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Tiphone 67', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Tiphone 88', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (3.9ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Tiphone 87', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Hardcase Apple Iphone', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (1.7ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(' Handphone Apple iphone 2g 16gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (2.3ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iphone 2g 8gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (1.9ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(' Handphone Apple iPhone 3G 8Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (7.3ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(' Handphone Apple iPhone 3GS 16GB', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (2.4ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('iphone 3GS 32 G', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (2.1ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3GS 16G', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (2.1ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3G 32GB', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (11.0ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('IPHONE 3GS 16GB FU', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (10.4ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3G - 16GB', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb Lock', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (3.0ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (2.3ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 8Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (9.5ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iphone 2g 8gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (1.9ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb China', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (3.0ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iphone 2g 16gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.8ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 8Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (1.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 16Gb', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (2.9ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Iphone 3GS 32GB', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;35;1mProduct Create (11.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3GS 32GB FU', 0.0, 1, '2010-01-27 08:57:54', '2010-01-27 08:57:54')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 3G 8Gb', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (2.2ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 2G 16Gb', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Handphone Apple iPhone 2G 8GB', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (1.6ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3GS & Mac Computer for sale', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (2.2ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Mac Computer & Apple iPhone for sale', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (1.6ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3GS & Mac Computer for sale', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (1.8ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('FOR SALE BRAND NEW 100% ORIGINAL APPLE I ...', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (3.1ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(' FOR SALE BRAND NEW 100% ORIGINAL APPLE ...', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual Blackberry, Apple Iphone, Nokia BM', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (2.1ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iphone 3Gs 32Gb Unlocked', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (2.5ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Brand New Apple Iphone 3GS 32gb......... ...', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (22.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple Iphone 3gs 32gb unlocked', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple Iphone 3gs 32gb unlocked', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;35;1mProduct Create (2.2ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple Iphone 3gs 32gb unlocked', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+  [4;36;1mProduct Create (2.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Apple iPhone 3G S 32GB For Less @ $300us ...', 0.0, 1, '2010-01-27 08:57:55', '2010-01-27 08:57:55')[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 4894ms (View: 10, DB: 149) | 200 OK [http://localhost/home/extract]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-28 12:54:11) [GET]
+  [4;36;1mProduct Load (6.2ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 93ms (View: 72, DB: 6) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-28 12:57:07) [GET]
+  [4;35;1mProduct Load (5.1ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 156ms (View: 114, DB: 5) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-28 12:58:09) [GET]
+  [4;36;1mProduct Load (23.1ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 99ms (View: 64, DB: 23) | 200 OK [http://localhost/products]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-28 13:51:29) [GET]
+
+
+ActionController::RoutingError (No route matches "/product" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 13:51:34) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 49ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 13:51:56) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+
+
+SyntaxError (/media/ahnShev-HD/ALL/TA/My TA/VIPS/SCRAPPING/aplikasi/scrapper/app/models/extractor.rb:37: syntax error, unexpected kEND
+/media/ahnShev-HD/ALL/TA/My TA/VIPS/SCRAPPING/aplikasi/scrapper/app/models/extractor.rb:57: syntax error, unexpected $end, expecting kEND):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:382:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:381:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:77:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:89:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:439:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:93:in `const_missing'
+    /app/controllers/home_controller.rb:12:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (65.0ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.4ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 13:53:40) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 13:53:43) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;35;1mRule Load (0.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+
+
+NoMethodError (undefined method `increment' for 0:Fixnum):
+    /app/models/extractor.rb:36:in `extract_product_from_online_web'
+    /usr/lib/ruby/gems/1.8/gems/nokogiri-1.4.0/lib/nokogiri/xml/node_set.rb:207:in `each'
+    /usr/lib/ruby/gems/1.8/gems/nokogiri-1.4.0/lib/nokogiri/xml/node_set.rb:206:in `upto'
+    /usr/lib/ruby/gems/1.8/gems/nokogiri-1.4.0/lib/nokogiri/xml/node_set.rb:206:in `each'
+    /app/models/extractor.rb:31:in `extract_product_from_online_web'
+    /app/controllers/home_controller.rb:13:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (68.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 13:55:03) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 13:55:10) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"nokia"}
+  [4;36;1mRule Load (0.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;35;1mRule Load (1.2ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mStatistic Create (2.0ms)[0m   [0;1mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "time_added", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(14, '2010-01-28 06:55:22', NULL, '2010-01-28 06:55:22', 0.077625, NULL, 11.606607, NULL, NULL, NULL, 'nokia', NULL, NULL)[0m
+  [4;35;1mProduct Create (17.7ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (8.8ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (1.9ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (2.1ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (13.1ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: nokia 6500 slide', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Nokia 7610', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (2.5ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jual Nokia 5800 (Blue) lengkap', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (7.1ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Nokia N 90', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (1.6ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Nokia 9300i', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (2.2ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Nokia E66', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (13.0ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jual Nokia 5300', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (3.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: JUAL HP NOKIA 6070', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;35;1mProduct Create (2.5ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jual Nokia 5610 Expres music', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jual Murah Nokia 2115', 0.0, 1, '2010-01-28 06:55:22', '2010-01-28 06:55:22')[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 12050ms (View: 19, DB: 84) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 13:58:01) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 32ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 14:01:09) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"jam"}
+  [4;35;1mRule Load (0.8ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;36;1mRule Load (0.7ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" IS NULL) LIMIT 1[0m
+
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    /app/controllers/home_controller.rb:18:in `extract'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (99.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 14:03:39) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 14:03:42) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"jam"}
+  [4;35;1mRule Load (9.6ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;35;1mStatistic Create (2.6ms)[0m   [0mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "time_added", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(14, '2010-01-28 07:03:54', NULL, '2010-01-28 07:03:54', 0.079005, NULL, 12.154226, NULL, NULL, NULL, 'jam', NULL, 4)[0m
+  [4;36;1mProduct Create (1.9ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;35;1mProduct Create (1.6ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;36;1mProduct Create (1.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;35;1mProduct Create (1.9ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;36;1mProduct Create (14.1ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jam antik', 0.0, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;35;1mProduct Create (1.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: JAM TANGAN COUPLE', 0.0, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jam Tangan Walls', 0.0, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;35;1mProduct Create (1.7ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jam Dinding Sedang R-35', 0.0, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;36;1mProduct Create (13.5ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jam Catur Omega', 0.0, 5, '2010-01-28 07:03:54', '2010-01-28 07:03:54')[0m
+  [4;35;1mProduct Create (2.3ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Studio Musik 1 jam', 0.0, 5, '2010-01-28 07:03:55', '2010-01-28 07:03:55')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Studio Musik 2 jam', 0.0, 5, '2010-01-28 07:03:55', '2010-01-28 07:03:55')[0m
+  [4;35;1mProduct Create (2.0ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Studio Musik 3 jam', 0.0, 5, '2010-01-28 07:03:55', '2010-01-28 07:03:55')[0m
+  [4;36;1mProduct Create (1.7ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Bisnis24jam', 0.0, 5, '2010-01-28 07:03:55', '2010-01-28 07:03:55')[0m
+  [4;35;1mProduct Create (10.2ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Jam dinding Keropi', 0.0, 5, '2010-01-28 07:03:55', '2010-01-28 07:03:55')[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 12523ms (View: 16, DB: 70) | 200 OK [http://localhost/home/extract]
+
+
+Processing HomeController#statistics (for 127.0.0.1 at 2010-01-28 14:05:17) [GET]
+
+
+ActionController::UnknownAction (No action responded to statistics. Actions: extract and index):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-01-28 14:05:23) [GET]
+  [4;36;1mStatistic Load (9.5ms)[0m   [0;1mSELECT * FROM "statistics" [0m
+Rendering template within layouts/statistics
+Rendering statistics/index
+Completed in 299ms (View: 56, DB: 10) | 200 OK [http://localhost/statistics]
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+Migrating to CreateStatistics (20100126151509)
+Migrating to CreateProducts (20100126151839)
+Migrating to RemoveTimeAddedFromStatistic (20100128074340)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (25.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_statistics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rule_id" integer, "time_added" time, "keyword" varchar(255), "download_time" float, "extract_time" float, "memory_consumption" float, "file_size_before_extraction" float, "file_size_after_extraction" float, "number_of_product_should_be_extracted" integer, "number_of_product_extracted" integer, "number_of_true_product_extracted" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("statistics")[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mDROP TABLE "statistics"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "statistics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rule_id" integer, "keyword" varchar(255), "download_time" float, "extract_time" float, "memory_consumption" float, "file_size_before_extraction" float, "file_size_after_extraction" float, "number_of_product_should_be_extracted" integer, "number_of_product_extracted" integer, "number_of_true_product_extracted" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_statistics")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_statistics"[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100128074340')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("products")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("rules")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("statistics")[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRules (20100126150843)
+Migrating to CreateStatistics (20100126151509)
+Migrating to CreateProducts (20100126151839)
+Migrating to RemoveTimeAddedFromStatistic (20100128074340)
+Migrating to ChangePriceFromProduct (20100128085246)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TEMPORARY TABLE "altered_products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "statistic_id" integer, "name" varchar(255), "price" float, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (242.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "statistic_id" integer, "name" varchar(255), "price" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_products")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_products"[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100128085246')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("products")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("rules")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("statistics")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-01-28 15:55:03) [GET]
+Rendering template within layouts/home
+Rendering home/index
+Completed in 40ms (View: 37, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HomeController#extract (for 127.0.0.1 at 2010-01-28 15:55:27) [POST]
+  Parameters: {"shop"=>"tokobagus", "commit"=>"Get extracted web content", "authenticity_token"=>"0037f00a88fe4a619c73e7cb2322aa1720ce4d6c", "keywords"=>"motor"}
+  [4;36;1mRule Load (0.6ms)[0m   [0;1mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "rules" WHERE ("rules"."name" = 'tokobagus') LIMIT 1[0m
+  [4;36;1mStatistic Create (6.5ms)[0m   [0;1mINSERT INTO "statistics" ("number_of_product_extracted", "created_at", "updated_at", "extract_time", "file_size_before_extraction", "download_time", "file_size_after_extraction", "number_of_product_should_be_extracted", "number_of_true_product_extracted", "keyword", "memory_consumption", "rule_id") VALUES(14, '2010-01-28 08:55:36', '2010-01-28 08:55:36', 0.067995, NULL, 9.397102, NULL, NULL, NULL, 'motor', NULL, 4)[0m
+  [4;35;1mProduct Create (11.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;36;1mProduct Create (14.6ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;35;1mProduct Create (21.8ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;36;1mProduct Create (1.8ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES(NULL, NULL, 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;35;1mProduct Create (2.4ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Motor Minerva', 'Rp.16.000.000', 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;36;1mProduct Create (3.4ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Toko Onderdil Motor Murah dan Lengkap', 'Rp.20.000', 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;35;1mProduct Create (2.6ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Grosir Onderdil dan Variasi Motor Murah', 'Rp.15.000', 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;36;1mProduct Create (2.2ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Dicari: KAMI BELI MOTOR BEKAS DAN MOTOR EX-HADIAH', 'Rp.1', 6, '2010-01-28 08:55:36', '2010-01-28 08:55:36')[0m
+  [4;35;1mProduct Create (3.7ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: LIMBAH MOTOR APRILLIA', 'Rp.12.000.000', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+  [4;36;1mProduct Create (4.0ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: jual motor perang dunia 2', 'Rp.100', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+  [4;35;1mProduct Create (4.1ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: FORMULA ANTI BOCOR BAN MOTOR ANDA', 'Rp.100.000', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+  [4;36;1mProduct Create (5.2ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: Motor Thunder 250', 'Rp.16.000.000', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+  [4;35;1mProduct Create (2.3ms)[0m   [0mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: grosir part motor', 'Rp.10.000', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+  [4;36;1mProduct Create (1.8ms)[0m   [0;1mINSERT INTO "products" ("name", "price", "statistic_id", "created_at", "updated_at") VALUES('Jual: jaket motor', 'Rp.9', 6, '2010-01-28 08:55:37', '2010-01-28 08:55:37')[0m
+Rendering template within layouts/home
+Rendering home/extract
+Completed in 9910ms (View: 14, DB: 89) | 200 OK [http://localhost/home/extract]
