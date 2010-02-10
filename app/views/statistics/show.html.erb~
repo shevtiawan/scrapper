@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <b>Time added:</b>
+  <%=h @statistic.time_added %>
+</p>
+
+<p>
   <b>Keyword:</b>
   <%=h @statistic.keyword %>
 </p>

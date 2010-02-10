@@ -1,4 +1,4 @@
-<h1>New statistic</h1>
+<h1>Editing statistic</h1>
 
 <% form_for(@statistic) do |f| %>
   <%= f.error_messages %>
@@ -7,7 +7,10 @@
     <%= f.label :rule_id %><br />
     <%= f.text_field :rule_id %>
   </p>
-  
+  <p>
+    <%= f.label :time_added %><br />
+    <%= f.datetime_select :time_added %>
+  </p>
   <p>
     <%= f.label :keyword %><br />
     <%= f.text_field :keyword %>
@@ -45,8 +48,9 @@
     <%= f.text_field :number_of_true_product_extracted %>
   </p>
   <p>
-    <%= f.submit "Create" %>
+    <%= f.submit "Update" %>
   </p>
 <% end %>
 
+<%= link_to 'Show', @statistic %> |
 <%= link_to 'Back', statistics_path %>

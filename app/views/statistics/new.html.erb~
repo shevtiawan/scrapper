@@ -7,7 +7,10 @@
     <%= f.label :rule_id %><br />
     <%= f.text_field :rule_id %>
   </p>
-  
+  <p>
+    <%= f.label :time_added %><br />
+    <%= f.datetime_select :time_added %>
+  </p>
   <p>
     <%= f.label :keyword %><br />
     <%= f.text_field :keyword %>

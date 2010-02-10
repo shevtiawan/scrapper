@@ -17,10 +17,10 @@
 	</div>
 	<div id="head-navigation">
 		<ul>
-			<li id="nav-extractor-current"><%= link_to 'onlineextractor', :controller => 'home', :action => 'offline' %></li>
-			<li id="nav-offlineextractor"><%= link_to 'offlineextractor', :controller => 'home', :action => 'offline' %></li>
+			<li id="nav-extractor"><%= link_to 'offline', :controller => 'home', :action => 'offline' %></li>
+			<li id="nav-offlineextractor"><%= link_to 'offline', :controller => 'home', :action => 'offline' %></li>
 			<li id="nav-products"><%= link_to 'products','products' %></li>
-			<li id="nav-rules"><%= link_to 'rules','rules' %></li>
+			<li id="nav-rules-current"><%= link_to 'rules','rules' %></li>
 			<li id="nav-statistic"><%= link_to 'statistics','statistics' %></li>
 			<li id="nav-about"><%= link_to 'about', :controller => 'about' %></li>
 		</ul>		

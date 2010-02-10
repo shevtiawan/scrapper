@@ -83,7 +83,7 @@ body{
 			width:110px;
 		}
 		#head-navigation ul li#nav-products a {
-			background:transparent url(../images/btn-products.jpg) no-repeat left top;
+			background:transparent url(../images/btn-rules.jpg) no-repeat left top;
 			width:110px;
 		}
 		#head-navigation ul li#nav-products a:hover,#head-navigation ul li#nav-products-current a  {

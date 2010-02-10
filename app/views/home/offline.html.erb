@@ -1,0 +1,17 @@
+<div id="content-1"class="grey">
+	<div id="search-form">
+		<h2>Extract data</h2>
+		<span style="color: green"><%= flash[:notice] %></span>
+		<% form_tag(:action => :extract_offline) do %>
+		<%= file_field_tag 'filename' %><br /><br />
+		<%= select_tag(:shop,
+		               options_for_select(%w{ walmart tokobagus tokopedia krazymarket bhinneka amazon yahooshopping},
+		                                  params[:shop])) %>
+		<%= submit_tag "Get extracted web content" %>
+		<% end %>
+	</div>
+</div>
+<div id="content-2"class="white">
+	
+</div>	
+

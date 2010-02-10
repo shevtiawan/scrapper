@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Rule</th>
-   
+    <th>Time added</th>
     <th>Keyword</th>
     <th>Download time</th>
     <th>Extract time</th>
@@ -18,7 +18,7 @@
 <% for statistic in @statistics %>
   <tr>
     <td><%=h statistic.rule_id %></td>
-
+    <td><%=h statistic.time_added %></td>
     <td><%=h statistic.keyword %></td>
     <td><%=h statistic.download_time %></td>
     <td><%=h statistic.extract_time %></td>

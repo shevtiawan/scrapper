@@ -8,7 +8,7 @@
 <meta name="description" content="description" />
 <meta name="keywords" content="keywords" />
 <meta name="robots" content="all" />
-<title>Home: <%= controller.action_name %></title>
+<title>About Web Extractor</title>
   <%= stylesheet_link_tag 'reset','text','style' %>
 </head>
 <body>
@@ -17,16 +17,19 @@
 	</div>
 	<div id="head-navigation">
 		<ul>
-			<li id="nav-extractor-current"><%= link_to 'onlineextractor', :controller => 'home', :action => 'offline' %></li>
-			<li id="nav-offlineextractor"><%= link_to 'offlineextractor', :controller => 'home', :action => 'offline' %></li>
+			<li id="nav-extractor"><a href="#">Extractor</a></li>
+			<li id="nav-offlineextractor"><%= link_to 'offline', :controller => 'home', :action => 'offline' %></li>
 			<li id="nav-products"><%= link_to 'products','products' %></li>
 			<li id="nav-rules"><%= link_to 'rules','rules' %></li>
 			<li id="nav-statistic"><%= link_to 'statistics','statistics' %></li>
-			<li id="nav-about"><%= link_to 'about', :controller => 'about' %></li>
+			<li id="nav-about-current"><%= link_to 'about', :controller => 'about' %></li>
 		</ul>		
 	</div>
 	<div id="bodier">
-		<%= yield  %>
+		<div id="content-1"class="grey">
+			<span style="color: green"><%= flash[:notice] %></span>
+			<%= yield  %>
+		</div>
 	</div>
 	<div id="footer">
 		<p><br />Copyright 2009 &copy; <a href="http://andrisetiawan.info/" title="andrisetiawan.info">andrisetiawan</a></p>
